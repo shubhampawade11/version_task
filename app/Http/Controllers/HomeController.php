@@ -42,6 +42,7 @@ class HomeController extends Controller
         foreach ($request->product_name as $index => $productName) {
            
             $product = new Product();
+            $product->user_id = $user->id;
             $product->product_name = $productName;
             $product->product_price = $request->product_price[$index];
             $product->product_quantity = $request->product_quantity[$index];
@@ -49,6 +50,7 @@ class HomeController extends Controller
             $product->discount = $request->discount[$index] ?? 0;
             $product->save();
         }
+        
 
         return response()->json([
             'message' => 'User and products added successfully!',

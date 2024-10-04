@@ -7,16 +7,33 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        $query = $request->input('search');
-    $user = User::where('name', 'LIKE', "%{$query}%")->get();
+        return view('crud.index');
+    }
 
-    return view('crud.index', compact('user'));
+    public function getData(Request $request)
+    {
+        $query = User::query();
+
+       
+        if ($request->has('name') && $request->name != '') {
+            $query->where('name', $request->name);
+        }
+
+        $users = $query->get(); 
+        return response()->json($users); 
+    }
+
+    public function getNames()
+    {
+        $names = User::select('name')->distinct()->get(); 
+        return response()->json($names);
     }
 
     public function edit(User $user)
     {
+        
         return view('crud.edit', compact('user'));
     }
 
@@ -31,13 +48,13 @@ class UserController extends Controller
         ]);
 
         $user->update($request->all());
-        return redirect()->route('search');
+        return redirect()->route('user.index');
     }
 
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('search');
+        return redirect()->route('user.index');
     }
 
 }

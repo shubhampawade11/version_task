@@ -3,7 +3,8 @@ table {
     border-collapse: collapse;
     margin-top: 20px;
 }
-th, td {
+th,
+td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
@@ -19,7 +20,7 @@ body {
     color: #333;
 }
 h2 {
-    color: #007BFF;
+    color: #007bff;
 }
 form {
     background-color: #fff;
@@ -34,8 +35,7 @@ input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="password"],
-input[type="number"],
-select {
+input[type="number"] {
     width: calc(100% - 22px);
     padding: 10px;
     margin: 8px 0;
@@ -43,12 +43,14 @@ select {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
-th, td {
+th,
+td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
@@ -57,7 +59,7 @@ th {
     background-color: #f4f4f4;
 }
 button {
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -71,8 +73,7 @@ button:hover {
     background-color: #0056b3;
 }
 .add-row {
-   
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -83,8 +84,8 @@ button:hover {
     transition: background-color 0.3s;
     width: 71px;
 }
-.removebtn{
-   background-color: red;
+.removebtn {
+    background-color: red;
 }
 .remove-icon {
     color: red;
@@ -95,31 +96,35 @@ button:hover {
     margin-left: 21px;
 }
 
-.userdetail{
+.userdetail {
     width: 312px;
-/* padding: 10px; */
-padding-left: 36%;
+    /* padding: 10px; */
+    padding-left: 36%;
 }
-.error-message{
+.error-message {
     color: red;
     font-size: 11px;
 }
-
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        .edit-link {
+.usertabled{
+    width: 125%;
+    border-collapse: collapse;
+    margin-top: 20px;  
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+.edit-link {
     color: #007bff; /* Bootstrap primary color */
     text-decoration: none;
     padding: 5px 10px;
@@ -151,3 +156,51 @@ padding-left: 36%;
     background-color: #c82333; /* Darker shade on hover */
 }
 
+.filter-label {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.name-filter {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.name-filter:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.name-filter option {
+    padding: 10px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 15px; /* Padding for better touch target */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Transition for effects */
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Bootstrap warning color */
+    color: #fff; /* Text color */
+}
+
+.btn-warning:hover {
+    background-color: #e0a800; /* Darker shade on hover */
+}
+
+.btn-warning:active {
+    transform: scale(0.95); /* Slight scale effect on click */
+}
